@@ -6,6 +6,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 
+
+/**
+ * Класс - настройка для Spring Security
+ * Настройка логина + пароля
+ * Настройка ролей и доступов
+ */
 @EnableWebSecurity
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 

@@ -18,6 +18,7 @@ public class MainController {
     MessageService messageService;
 
 
+    // Отображение главной страницы сайта
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public String indexPage (){
         return "index.html";
@@ -25,6 +26,7 @@ public class MainController {
 
 
 
+    //Добавление нового сообщения в чат
     @RequestMapping("/addNewTopic")
     public String addNewTopic(Model model){
         Topic topic = new Topic();
@@ -32,7 +34,7 @@ public class MainController {
         return "topic.html";
     }
 
-
+    //Выгрузка сообщения из обратной связи в БД, редирект на главную страницу сайта
     @PostMapping("/saveNewMessage")
     public String saveMessage(@RequestParam(name = "name") String name,
                               @RequestParam(name = "email") String email,

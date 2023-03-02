@@ -2,6 +2,11 @@ package com.ulrikhsergey.board_info.entity;
 
 import javax.persistence.*;
 
+/**
+ * Класс для связи с БД
+ * Класс отвечает за сообщения из обратной связи.
+ *
+ */
 @Entity
 @Table(name = "usermessages")
 public class UserMessage {

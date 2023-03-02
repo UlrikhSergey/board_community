@@ -2,6 +2,10 @@ package com.ulrikhsergey.board_info.entity;
 
 import javax.persistence.*;
 
+/**
+ * Класс для связи с БД
+ * Класс отвечает за сообщения в разделе чата.
+ */
 @Entity
 @Table(name = "topics")
 public class Topic {

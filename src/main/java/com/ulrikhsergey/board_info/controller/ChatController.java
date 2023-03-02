@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @Controller
 public class ChatController {
     @Autowired
     TopicService topicService;
 
+    // Вывод всех сообщений чата
     @GetMapping("/chat")
     public String getAllTopics(Model model){
         Iterable<Topic> topics = topicService.getAllTopics();
@@ -21,6 +23,7 @@ public class ChatController {
         return "first.html";
     }
 
+    // Отправка сообщения в чат, редирект на основную страницу со всеми сообщениями
     @PostMapping("/saveTopic")
     public String saveTopic(@RequestParam String name,
                             @RequestParam String topic,
